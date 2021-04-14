@@ -1,4 +1,4 @@
-name: Checkstyle verification 
+name: Checkstyle 
 
 on: [push, pull_request]
 
