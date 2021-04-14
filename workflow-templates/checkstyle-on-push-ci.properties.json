@@ -1,0 +1,9 @@
+{
+    "name": "Checkstyle verification Workflow",
+    "description": "Checkstyle verification workflow template.",
+    "iconName": "checkstyle",
+    "categories": [
+        "YAML"
+    ]
+}
+
