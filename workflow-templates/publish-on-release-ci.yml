@@ -20,21 +20,6 @@ jobs:
         run: mvn install -U -B -DskipTests=true
       - name: Maven Verify
         run: mvn -B verify
-      - name: Create custom Maven settings
-        uses: whelk-io/maven-settings-xml-action@v14
-        with:
-          servers: '[
-            {
-              "id":"jboss-releases-repository",
-              "username":"${env.JBOSS_USERNAME}",
-              "password":"${env.JBOSS_PASSWORD}"
-            },
-            {
-              "id":"jboss-snapshots-repository",
-              "username":"${env.JBOSS_USERNAME}",
-              "password":"${env.JBOSS_PASSWORD}"
-            }
-          ]'
       - name: Maven Deploy
         run: mvn -X deploy -DskipTests
         env:
