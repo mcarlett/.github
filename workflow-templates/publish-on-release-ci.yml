@@ -1,12 +1,15 @@
 name: Publish Maven Release
 
+<<<<<<< HEAD
 on:
   release:
     types: [created]
+=======
+on: [push, pull_request]
+>>>>>>> 49388198da1904e8f6346dce9947d9528255110e
 
 jobs:
   publish:
-    name: Publish artifact to repository
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,6 +19,7 @@ jobs:
           java-version: 11
           distribution: 'adopt'
       - name: Install package
+<<<<<<< HEAD
         run: mvn clean install -U -B -DskipTests=true
       - name: Maven Verify
         run: mvn -B verify
@@ -39,3 +43,6 @@ jobs:
         env:
           JBOSS_USERNAME: ${{ secrets.JBOSS_USERNAME }}
           JBOSS_PASSWORD: ${{ secrets.JBOSS_PASSWORD }}
+=======
+        run: mvn install -U
+>>>>>>> 49388198da1904e8f6346dce9947d9528255110e
