@@ -1,8 +1,7 @@
 name: Publish Maven Release
 
-on:
-  release:
-    types: [created]
+on: [push, pull_request]
+
 jobs:
   publish:
     runs-on: ubuntu-latest
