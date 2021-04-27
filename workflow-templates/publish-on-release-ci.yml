@@ -18,8 +18,3 @@ jobs:
         run: mvn install -U -B -DskipTests=true
       - name: Maven Verify
         run: mvn -B verify
-      - name: Maven Deploy
-        run: mvn -X deploy -DskipTests
-        env:
-          JBOSS_USERNAME: ${{ secrets.JBOSS_USERNAME }}
-          JBOSS_PASSWORD: ${{ secrets.JBOSS_PASSWORD }}
