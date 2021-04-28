@@ -1,23 +1,24 @@
 name: Create Maven Release
 
-on: workflow_dispatch
-  inputs:
-    release-version:
-      description: 'Release version'
-      required: true
-      default: '0.0.0'
-    devel-version:
-      description: 'Development version'
-      required: true
-      default: '0.0.0-SNAPSHOT'
-    release-branch:
-      description: 'Release branch'
-      required: true
-      default: 'master'    
-    devel-branch:
-      description: 'Development branch'
-      required: true
-      default: 'develop'
+on:
+  workflow_dispatch:
+    inputs:
+      release-version:
+        description: 'Release version'
+        required: true
+        default: '0.0.0'
+      devel-version:
+        description: 'Development version'
+        required: true
+        default: '0.0.0-SNAPSHOT'
+      release-branch:
+        description: 'Release branch'
+        required: true
+        default: 'master'    
+      devel-branch:
+        description: 'Development branch'
+        required: true
+        default: 'develop'
 
 jobs:
   perform-release:
