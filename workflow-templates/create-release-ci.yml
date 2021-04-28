@@ -11,6 +11,8 @@ jobs:
     - id: perform
       uses: mcarlett/release-explicit-version-action@v0.05
       with:
+        release-version: 0.0.0
+        devel-version: 0.0.0-SNAPSHOT
         devel-branch: $GITHUB_REF
         release-branch: master
     - run: "echo generated release: ${{ steps.perform.outputs.generated-tag }}"
