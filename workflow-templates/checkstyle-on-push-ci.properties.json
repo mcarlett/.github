@@ -3,6 +3,6 @@
     "description": "Checkstyle verification workflow template.",
     "iconName": "checkstyle",
     "categories": [
-        "YAML"
+        "Code quality"
     ]
 }
