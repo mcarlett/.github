@@ -21,7 +21,8 @@ jobs:
       - name: Create custom Maven settings
         uses: whelk-io/maven-settings-xml-action@v14
         with:
-          servers: '[
+          servers: > 
+          '[
             {
               "id":"jboss-releases-repository",
               "username":"${env.JBOSS_USERNAME}",
