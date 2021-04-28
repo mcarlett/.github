@@ -1,0 +1,8 @@
+{
+    "name": "Create GitHub Release",
+    "description": "Create GitHub Release workflow template.",
+    "iconName": "build-by-maven-black",
+    "categories": [
+        "Deployment"
+    ]
+}
