@@ -3,7 +3,6 @@
     "description": "Publish Maven Release workflow template.",
     "iconName": "build-by-maven-black",
     "categories": [
-        "YAML",
         "Deployment"
     ]
 }
