@@ -4,6 +4,7 @@ on:
   release:
     types: [created]
 
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -21,21 +22,9 @@ jobs:
       - name: Create custom Maven settings
         uses: whelk-io/maven-settings-xml-action@v14
         with:
-          servers: '[
-            {
-              "id":"jboss-releases-repository",
-              "username":"${env.JBOSS_USERNAME}",
-              "password":"${env.JBOSS_PASSWORD}"
-            },
-            {
-              "id":"jboss-snapshots-repository",
-              "username":"${env.JBOSS_USERNAME}",
-              "password":"${env.JBOSS_PASSWORD}"
-            }
-          ]'
+          servers: '[{"id":"jboss-releases-repository","username":"${env.JBOSS_USERNAME}","password":"${env.JBOSS_PASSWORD}"},{"id":"jboss-snapshots-repository","username":"${env.JBOSS_USERNAME}","password":"${env.JBOSS_PASSWORD}"}]'
       - name: Maven Deploy
         run: mvn -X deploy -DskipTests
         env:
           JBOSS_USERNAME: ${{ secrets.JBOSS_USERNAME }}
           JBOSS_PASSWORD: ${{ secrets.JBOSS_PASSWORD }}
-        run: mvn install -U
