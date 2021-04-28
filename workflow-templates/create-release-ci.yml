@@ -10,7 +10,7 @@ jobs:
     - id: checkout
       uses: actions/checkout@v2
     - id: perform
-      uses: mcarlett/release-explicit-version-action@v0.08
+      uses: mcarlett/release-explicit-version-action@v0.10
       with:
         release-version: 0.0.0
         devel-version: 0.0.0-SNAPSHOT
