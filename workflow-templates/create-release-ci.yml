@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Perform Maven release
     steps:
+    - id: checkout
+      uses: actions/checkout@v2
     - id: perform
       uses: mcarlett/release-explicit-version-action@v0.07
       with:
