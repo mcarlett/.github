@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     name: Perform Maven release
     steps:
-    - uses: actions/checkout@v2
     - id: perform
-      uses: mcarlett/release-explicit-version-action@v0.06
+      uses: mcarlett/release-explicit-version-action@v0.07
       with:
         release-version: 0.0.0
         devel-version: 0.0.0-SNAPSHOT
         devel-branch: develop
         release-branch: master
-    - run: "echo generated release: ${{ steps.perform.outputs.generated-tag }}"
+    - id: show-tag
+      run: "echo generated release: ${{ steps.perform.outputs.generated-tag }}"
       shell: bash
