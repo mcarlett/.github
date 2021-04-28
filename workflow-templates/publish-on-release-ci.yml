@@ -23,7 +23,7 @@ jobs:
         with:
           servers: '[{"id":"jboss-releases-repository","username":"${env.JBOSS_USERNAME}","password":"${env.JBOSS_PASSWORD}"},{"id":"jboss-snapshots-repository","username":"${env.JBOSS_USERNAME}","password":"${env.JBOSS_PASSWORD}"}]'
       - name: Maven Deploy
-        run: mvn -X deploy -DskipTests
+        run: mvn deploy -DskipTests
         env:
           JBOSS_USERNAME: ${{ secrets.JBOSS_USERNAME }}
           JBOSS_PASSWORD: ${{ secrets.JBOSS_PASSWORD }}
