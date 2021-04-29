@@ -1,0 +1,8 @@
+{
+    "name": "Create and deploy Maven Release",
+    "description": "Create Maven Release and publish it into Maven repository.",
+    "iconName": "build-by-maven-black",
+    "categories": [
+        "Deployment"
+    ]
+}
