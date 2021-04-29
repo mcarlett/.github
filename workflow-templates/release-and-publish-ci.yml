@@ -35,7 +35,7 @@ jobs:
         java-version: 11
         distribution: 'adopt'
     - id: perform
-      name: "Permorm Release"
+      name: "Perform Release"
       uses: mcarlett/release-explicit-version-action@v0.22
       with:
         release-version: ${{ github.event.inputs.release-version }}
