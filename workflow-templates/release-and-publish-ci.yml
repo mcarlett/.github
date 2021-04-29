@@ -36,7 +36,7 @@ jobs:
         distribution: 'adopt'
     - id: perform
       name: "Perform Release"
-      uses: mcarlett/release-explicit-version-action@v0.22
+      uses: mcarlett/release-explicit-version-action@v0.24
       with:
         release-version: ${{ github.event.inputs.release-version }}
         devel-version: ${{ github.event.inputs.devel-version }}
